@@ -1,11 +1,18 @@
-import { StyleSheet, Text, View,Image } from 'react-native'
+import { StyleSheet, Text, View,Image, useColorScheme } from 'react-native'
 import React from 'react'
 import logo from "../assets/Images/car1.jpg"
 import { Link } from 'expo-router'
+import  {Colors } from '../constant/color.js'
+
+
 
 const Home = () => {
+
+    const colorSchema = useColorScheme();
+    
+    const color = Colors[colorSchema];
   return (
-    <View style ={{ flex: 1, justifyContent: 'center',alignItems: 'center' ,backgroundColor:'hsl(220, 56%, 5%)'}}>
+    <View style ={{ flex: 1, justifyContent: 'center',alignItems: 'center' , backgroundColor:color.background}}>
       
       <Text style ={[styles.text,{color :'green'}]}>This is the Main page</Text>
       <Text style ={{color:'white'}}> Welcome !</Text>

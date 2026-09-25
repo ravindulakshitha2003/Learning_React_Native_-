@@ -7,6 +7,7 @@ import  {Colors } from '../constant/color.js'
 import TheamedView from '../components/TheamedView.jsx'
 import TheamCard from '../components/TheamCard.jsx'
 import ThemText from '../components/ThemText.jsx'
+import Button from '../components/Button.jsx'
 
 
 
@@ -22,19 +23,18 @@ const Home = () => {
       <Text style ={{color:'white'}}> Welcome !</Text>
 
 
-      <Pressable
-      onPress={()=>{
+      <Button
+        onPress={()=>{
         console.log("presssed");
-      }}
-      style={(pressed)=>[styles.btn , styles.pressed && pressed ]}
-      
-      >
+      }}>
         <ThemText styles={{color : 'black',fontWeight :10}} > Login button </ThemText>
-      </Pressable>
+      </Button>
     
       <Image source={logo}  style ={styles.img} />
       <Link href='/about' style={styles.text} >about  </Link>
       <Link href='/login' style={styles.text} > Loign .... </Link>
+      <Link href='/profile' style={styles.text} > Profile .... </Link>
+     
       <TheamCard >
           <Text style ={{color : color.text}}>"this is card view"</Text>
       </TheamCard>
@@ -64,17 +64,5 @@ const styles = StyleSheet.create({
    
 
   }
-  ,
-  btn :{
-    backgroundColor : 'hsl(207, 22%, 82%)',
-    borderRadius : 10,
-    borderWidth : 2,
-    marginVertical : 12,
-    
-    
-  },
-  pressed:{
-    opacity: 0.8
-  }
-
+  
 })

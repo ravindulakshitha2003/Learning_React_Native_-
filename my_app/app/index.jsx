@@ -1,8 +1,11 @@
 import { StyleSheet, Text, View,Image, useColorScheme } from 'react-native'
 import React from 'react'
 import logo from "../assets/Images/car1.jpg"
+import logo2 from "../assets/Images/car2.jpg"
 import { Link } from 'expo-router'
 import  {Colors } from '../constant/color.js'
+import TheamedView from '../components/TheamedView.jsx'
+import TheamCard from '../components/TheamCard.jsx'
 
 
 
@@ -12,14 +15,17 @@ const Home = () => {
     
     const color = Colors[colorSchema];
   return (
-    <View style ={{ flex: 1, justifyContent: 'center',alignItems: 'center' , backgroundColor:color.background}}>
+    <TheamedView style ={{ flex: 1, justifyContent: 'center',alignItems: 'center' , backgroundColor:color.background}}>
       
       <Text style ={[styles.text,{color :'green'}]}>This is the Main page</Text>
       <Text style ={{color:'white'}}> Welcome !</Text>
 
-     <Image source={logo}  style ={styles.img} />
+      <Image source={logo}  style ={styles.img} />
       <Link href='/about' style={styles.text} >about  </Link>
-    </View>
+      <TheamCard >
+          <Text style ={{color : color.text}}>"this is card view"</Text>
+      </TheamCard>
+    </TheamedView>
     
   )
 }
@@ -39,7 +45,8 @@ const styles = StyleSheet.create({
   },
   text :{
     fontWeight : 'bold',
-    textAlignVertical : 'center',
+   textAlign :'center',
+   alignItems : 'center',
     color : 'white'
    
 

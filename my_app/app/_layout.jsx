@@ -14,7 +14,7 @@ const rootLayout = () => {
      <>
       <StatusBar value ='auto'/>
        <Stack  screenOptions={{
-        headerStyle :{backgroundColor: +0color.background},
+        headerStyle :{backgroundColor: color.background},
         headerTintColor : 'white',
         headerTitleAlign :'center',
 

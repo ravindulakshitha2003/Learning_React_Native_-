@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View,Image, useColorScheme } from 'react-native'
+import { StyleSheet, Text, View,Image, useColorScheme, Pressable } from 'react-native'
 import React from 'react'
 import logo from "../assets/Images/car1.jpg"
 import logo2 from "../assets/Images/car2.jpg"
@@ -6,6 +6,7 @@ import { Link } from 'expo-router'
 import  {Colors } from '../constant/color.js'
 import TheamedView from '../components/TheamedView.jsx'
 import TheamCard from '../components/TheamCard.jsx'
+import ThemText from '../components/ThemText.jsx'
 
 
 
@@ -20,8 +21,20 @@ const Home = () => {
       <Text style ={[styles.text,{color :'green'}]}>This is the Main page</Text>
       <Text style ={{color:'white'}}> Welcome !</Text>
 
+
+      <Pressable
+      onPress={()=>{
+        console.log("presssed");
+      }}
+      style={(pressed)=>[styles.btn , styles.pressed && pressed ]}
+      
+      >
+        <ThemText styles={{color : 'black',fontWeight :10}} > Login button </ThemText>
+      </Pressable>
+    
       <Image source={logo}  style ={styles.img} />
       <Link href='/about' style={styles.text} >about  </Link>
+      <Link href='/login' style={styles.text} > Loign .... </Link>
       <TheamCard >
           <Text style ={{color : color.text}}>"this is card view"</Text>
       </TheamCard>
@@ -51,4 +64,17 @@ const styles = StyleSheet.create({
    
 
   }
+  ,
+  btn :{
+    backgroundColor : 'hsl(207, 22%, 82%)',
+    borderRadius : 10,
+    borderWidth : 2,
+    marginVertical : 12,
+    
+    
+  },
+  pressed:{
+    opacity: 0.8
+  }
+
 })

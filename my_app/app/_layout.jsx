@@ -4,6 +4,7 @@ import React from 'react'
 import { Slot, Stack } from 'expo-router'
 
 import { Colors } from '../constant/color.js'
+import { UserProvider } from '../context/userContext.jsx'
 
 const rootLayout = () => {
   const colorSchema = useColorScheme();
@@ -11,7 +12,7 @@ const rootLayout = () => {
   
   return (
     
-     <>
+     <UserProvider>
       <StatusBar value ='auto'/>
        <Stack  screenOptions={{
         headerStyle :{backgroundColor: color.background},
@@ -24,7 +25,7 @@ const rootLayout = () => {
         <Stack.Screen   name='(auth)' options={{headerShown : false}} />
         <Stack.Screen   name='(dashboard)' options={{headerShown : false}} />
       </Stack>
-     </>
+     </UserProvider>
       
 
   )

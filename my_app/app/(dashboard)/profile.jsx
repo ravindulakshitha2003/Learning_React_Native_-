@@ -5,7 +5,7 @@ import ThemText from '../../components/ThemText'
 
 const profile = () => {
   return (
-   <TheamedView style={{flex : 1,justifyContent: 'center',alignItems: 'center'}} >
+   <TheamedView  style={{flex : 1,justifyContent: 'center',alignItems: 'center'}}  >
         <ThemText>"prfile pircture"</ThemText>
    </TheamedView>
   )

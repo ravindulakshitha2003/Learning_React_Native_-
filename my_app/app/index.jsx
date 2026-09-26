@@ -14,6 +14,7 @@ import Button from '../components/Button.jsx'
 const Home = () => {
 
     const colorSchema = useColorScheme();
+//   
     
     const color = Colors[colorSchema];
   return (

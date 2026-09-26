@@ -6,7 +6,7 @@ import ThemText from '../../components/ThemText'
 
 const shop = () => {
   return (
-    <TheamedView>
+    <TheamedView safe={true}>
         <ThemText> SHOPING</ThemText>
     </TheamedView>
   )

@@ -9,6 +9,8 @@ export const  Colors = {
     iconColor: "#9591a5",
     iconColorFocused: "#fff",
     uiBackground: "#2f2b3d",
+    inputbox : '#7b7695',
+    inputText :  '#201e2b'
   },
 
   light: {
@@ -17,5 +19,7 @@ export const  Colors = {
     background: "#e0dfe8",
     navBackground: "#e8e7ef",
     iconColor: "#686477",
+    inputbox : '#b4ace3',
+    inputText :  '#201e2b'
   },
 };
